@@ -6,27 +6,30 @@ pipeline {
             steps {
                 echo 'Hello World'
             }
-            
         }
-             stage('Build') {
+
+        stage('Build') {
             steps {
                 echo 'Building'
             }
-                 
-             }
-             stage('Deploy') {
+        }
+
+        stage('Deploy') {
             steps {
                 echo 'Deploying'
             }
-             }
-             stage('test') {
-            steps {
-                echo 'testing'
-            }
-             }
-             stage('relese') {
-            steps {
-                echo 'releasing'
-            }
+        }
 
-}}}
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+
+        stage('Release') {
+            steps {
+                echo 'Releasing'
+            }
+        }
+    }
+}
